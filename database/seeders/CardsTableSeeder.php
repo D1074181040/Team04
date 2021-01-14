@@ -13,7 +13,7 @@ class CardsTableSeeder extends Seeder
      * @return void
      */
     public function generateRandomstatus(){
-        $status=['成功','失敗'];
+        $status=['進入','離開'];
         return $status[rand(0,count($status)-1)];
     }
     public function run()

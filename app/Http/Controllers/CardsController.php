@@ -15,7 +15,8 @@ class CardsController extends Controller
     public function index()
     {
 
-        /*$cards=cards::all();*/
+        $cards=cards::all();
+        /*
         $cards=DB::table('cards')
             ->join('residents','cards.n_ID','=','residents.n_ID')
             ->orderBy('cards.id')
@@ -25,6 +26,7 @@ class CardsController extends Controller
                 'cards.p_time',
                 'cards.status'
             )->get();
+        */
       return view('cards.index',['cards'=>$cards]);
     }
 

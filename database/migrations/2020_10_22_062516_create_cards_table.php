@@ -18,7 +18,7 @@ class CreateCardsTable extends Migration
             $table->integer('n_ID')->unsigned()->comment('卡號');
             $table->dateTime('p_time')->comment('通行時間');
             $table->string('status',20)->comment('狀態');
-            $table->foreign('n_ID')->references('id')->on('residents');
+            $table->foreign('n_ID')->references('n_ID')->on('residents');
             $table->timestamps();
         });
     }

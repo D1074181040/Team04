@@ -3,7 +3,7 @@
 @section('contents')
 @section('topic','顯示所有卡片的資料')
 <p align="center"><a href="{{ route('cards.create')}}" class="ml-1 underline">新增卡片資料</a><br/>
-    <a href="{{ route('cards.enter')}}"> 進入卡片 </a>
+    <a href="{{ route('cards.enter')}}"> 進入的卡 </a>
 <table boader="1"align="center"cellpadding="4">
     <tr>
         <th>編號</th>
@@ -19,7 +19,7 @@
         <tr>
             <td>{{$card->id}}</td>
             <td>{{$card->n_ID}}</td>
-            <td>{{$card->p_name}}</td>
+            <td>{{$card->residents['p_name']}}</td>
             <td>{{$card->p_time}}</td>
 
             <td>

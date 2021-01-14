@@ -20,7 +20,7 @@ class residents extends Model
     ];
     public function card()
     {
-        return $this->belongsTo('App\Models\card','n_ID','id');
+        return $this->hasMany('App\Models\cards','n_ID','n_ID');
     }
     public function scopeMale($query)
     {
